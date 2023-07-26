@@ -1,24 +1,48 @@
-import './style.css'
-import javascriptLogo from './javascript.svg'
-import viteLogo from '/vite.svg'
-import { setupCounter } from './counter.js'
+import exercisesBanner from "./components/exercises/exercisesBanner";
+import { banner } from "./components/homepage/banner";
+import modelFooter from "./components/homepage/footer/modelFooter";
+import styleFooter from "./components/homepage/footer/styleFooter";
+import { nav } from "./components/homepage/nav";
+import section from "./components/homepage/section";
 
-document.querySelector('#app').innerHTML = `
-  <div>
-    <a href="https://vitejs.dev" target="_blank">
-      <img src="${viteLogo}" class="logo" alt="Vite logo" />
-    </a>
-    <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank">
-      <img src="${javascriptLogo}" class="logo vanilla" alt="JavaScript logo" />
-    </a>
-    <h1>Hello Vite!</h1>
-    <div class="card">
-      <button id="counter" type="button"></button>
-    </div>
-    <p class="read-the-docs">
-      Click on the Vite logo to learn more
-    </p>
-  </div>
-`
+import "./style.css";
 
-setupCounter(document.querySelector('#counter'))
+window.onload = () => {
+  const routes = {
+    "/": () => {
+      nav();
+
+      banner();
+
+      section();
+
+      modelFooter();
+      styleFooter();
+    },
+    "/exercises": () => {
+      nav();
+      exercisesBanner();
+      modelFooter();
+    },
+
+    "/while": () => {
+      nav();
+      modelFooter();
+    },
+    "/for": () => {
+      nav();
+      modelFooter();
+    },
+    "/ifelse": () => {
+      nav: {
+        nav();
+      }
+      footer: {
+        modelFooter();
+      }
+    },
+  };
+
+  const path = window.location.pathname;
+  return routes[path]();
+};

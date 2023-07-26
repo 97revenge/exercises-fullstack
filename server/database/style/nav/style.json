@@ -1,0 +1,16 @@
+{
+  "version": "display:flex; flex-direction:row; justify-content: center; align-items:center; gap:134px; width: 1400px; padding: 16px 24px; box-sizing:border-box; background: #4caf4f;  width: 100%; ",
+  "dashboard": "color: rgba(21, 25, 36, 1); color: rgba(21, 25, 36, 1);  font-size: 20px;   line-height: 20px; font-family: Poppins, sans-serif;  font-weight: 500;  ",
+  "shearch-bar": "display:flex; flex-direction:row; justify-content:center; align-items: center; gap:12px; width:400px; height:fit-content; padding:8px 8px 8px 16px; border-radius:8px; box-sizing: boder-box; background-color:rgba(245, 246,247,1);",
+  "vuesax-linear-search-normal": "height: 100%; width:20px;",
+  "shearch": "color: rgba(121, 127, 143, 1); font-size: 14px; line-height: 143%;  font-family: Poppins, sans-serif; font-weight: 400;",
+  "right-side-menu": "display: flex; flex-direction: row; justify-content:flex-start; align-items:center; gap:24px; height:100%; box-sizing:border-box;",
+  "notif-theme": "gap:24px; height:15px;  width: 64px; fit-content;",
+  "user-information": "display:flex; flex-direction: row; justify-content:flex-start; align-items:center; gap:12px; height:100%; box-sizing:border-box;",
+  "profile-pict-name": "display:flex; flex-direction: row; justify-content: flex-start; align-items:center; gap:12px; height:100%; box-sizing:border-box",
+  "profile-picture": "width: 40px; height:100%;",
+  "user-name-email": "display:flex; flex-direction:column; justify-content:flex-start; align-items:flex-start; gap:2px; height:fit-content; box-sizing:border-box;",
+  "natashia-bunny[user-letter]": " color: rgba(21, 25, 36, 1); font-size:14px; line-height:143%; font-family:Poppins, sans-serif; font-weight:500;",
+  "natasiabunny-mail-com[email-user-letter]": "color: rgba(68, 71, 80, 1); font-size: 12px; line-height: 133%; font-family: Poppins, sans-serif;  font-weight: 400;",
+  "vuesax-linear-arrow-down": "width: 20px; height:20px"
+}
