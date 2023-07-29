@@ -41,5 +41,5 @@ export default function modelFooter() {
   instance.elem(footer.div.div);
   instance.elem(footer.div.div.div);
 
-  console.log(footer);
+  // console.log(footer);
 }

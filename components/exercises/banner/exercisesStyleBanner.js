@@ -2,8 +2,7 @@
 
 import axios from "axios";
 
-export default function exercisesBanner() {
-  //   const value = Object.create(banner());
+export default function exercisesStyleBanner() {
   const div = document.createElement("div");
 
   const heroSection = div.cloneNode(true);
@@ -13,7 +12,7 @@ export default function exercisesBanner() {
   const elemSection = (elem, tag = "banner") => {
     axios
       .get(`http://localhost:4000/${tag}`)
-      .then((response) => response.data) 
+      .then((response) => response.data)
       .then((data) => {
         const value = Object.values(data)[0];
         elem.style = value;
@@ -22,6 +21,4 @@ export default function exercisesBanner() {
   };
 
   elemSection(heroSection);
-
-  console.log(value);
 }

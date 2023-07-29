@@ -1,0 +1,13 @@
+# usando Github Actions para subir minha api
+name: Deploy the Api
+run-name: ${{github.actor}} is learning GiHub Actions
+on:
+  push:
+    branches:
+      - main # esta é a minha branch principal
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses:
