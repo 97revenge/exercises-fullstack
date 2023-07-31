@@ -1,5 +1,8 @@
-import exercisesBanner from "./components/exercises/exercisesBanner";
+import exercisesModelFooter from "./components/exercises/banner/exercisesModelFooter";
+import exercisesStyleBanner from "./components/exercises/banner/exercisesStyleBanner";
+
 import { banner } from "./components/homepage/banner";
+import controllerFooter from "./components/homepage/footer/controllerFooter";
 import modelFooter from "./components/homepage/footer/modelFooter";
 import styleFooter from "./components/homepage/footer/styleFooter";
 import { nav } from "./components/homepage/nav";
@@ -16,12 +19,12 @@ window.onload = () => {
 
       section();
 
-      modelFooter();
-      styleFooter();
+      controllerFooter();
     },
     "/exercises": () => {
       nav();
-      exercisesBanner();
+      exercisesStyleBanner();
+      exercisesModelFooter();
       modelFooter();
     },
 
@@ -34,14 +37,13 @@ window.onload = () => {
       modelFooter();
     },
     "/ifelse": () => {
-      nav: {
-        nav();
-      }
-      footer: {
-        modelFooter();
-      }
+      nav();
+      modelFooter();
     },
   };
+
+  // routes precisa receber uma requisicao com um nome criado, e assim
+  // trazer isso para um valor que ainda será construido ...
 
   const path = window.location.pathname;
   return routes[path]();

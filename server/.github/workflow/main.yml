@@ -1,0 +1,18 @@
+# usando Github Actions para subir minha api
+name: Deploy the Api
+run-name: ${{github.actor}} is learning GiHub Actions
+on:
+  push:
+    branches:
+      - main # esta é a minha branch principal
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: action/checkout@v3
+      - uses: actions/setup-node@v3
+        with:
+          node-version: "18"
+      - run: npm i
+      - run: npm run nodemon

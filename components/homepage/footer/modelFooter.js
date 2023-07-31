@@ -1,11 +1,11 @@
 export default function modelFooter() {
   const footer = document.querySelector("footer");
 
-  function Global() {
+  function Component() {
     return {};
   }
 
-  Global.prototype.constructor = new Object({
+  Component.prototype.constructor = new Object({
     div: document.createElement("div"),
     p: document.createElement("p"),
     img: document.createElement("img"),
@@ -13,33 +13,20 @@ export default function modelFooter() {
     title: document.createElement("title"),
   });
 
-  Global.prototype.elem = function (appender) {
-    const { div } = Global.prototype.constructor;
-    const elem = div.cloneNode(true);
-    appender.div = elem;
-    appender.appendChild(elem);
-    // console.log(appender);
+  const component = Object.assign(Component.prototype.constructor, {
+    brand: document.createElement("brand"),
+  });
+
+  const appendElement = (appender, attach) => appender.appendChild(attach);
+
+  const newElement = (appender, elemType) => {
+    const element = component[elemType].cloneNode(false);
+    return appendElement(appender, element);
   };
 
-  Global.prototype.item = function (appender) {
-    const { div } = Global.prototype.constructor;
-    const elem = div.cloneNode(true);
-    appender.appendChild(elem);
-  };
+  newElement(footer, "div");
 
-  Global.prototype.value = function (appender) {
-    const { div } = Global.prototype.constructor;
-    const elem = div.cloneNode(true);
-    appender.appendChild(elem);
-  };
-
-  const generateInstance = () => (instance = Global.prototype);
-  var instance = generateInstance(instance);
-
-  instance.elem(footer);
-  instance.elem(footer.div);
-  instance.elem(footer.div.div);
-  instance.elem(footer.div.div.div);
-
-  console.log(footer);
+  for (let i = 0; i <= 10; i++) {
+    newElement(footer.querySelectorAll("div")[i], "div");
+  }
 }
