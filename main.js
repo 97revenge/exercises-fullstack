@@ -2,6 +2,7 @@ import exercisesModelFooter from "./components/exercises/banner/exercisesModelFo
 import exercisesStyleBanner from "./components/exercises/banner/exercisesStyleBanner";
 
 import { banner } from "./components/homepage/banner";
+import controllerFooter from "./components/homepage/footer/controllerFooter";
 import modelFooter from "./components/homepage/footer/modelFooter";
 import styleFooter from "./components/homepage/footer/styleFooter";
 import { nav } from "./components/homepage/nav";
@@ -18,8 +19,7 @@ window.onload = () => {
 
       section();
 
-      modelFooter();
-      styleFooter();
+      controllerFooter();
     },
     "/exercises": () => {
       nav();

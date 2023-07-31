@@ -24,9 +24,6 @@ export function nav() {
   header.appendChild(elemShearchBar);
   header.appendChild(titleDashboard);
 
-  // var senaiIMG = document.querySelectorAll("img")[2]; // REFATORAR !!!
-  // senaiIMG.style = `height: 50px; width: auto;`;
-
   const headerNav = (tag = "nav") => {
     axios(`http://localhost:4000/${tag}`, {
       method: "GET",

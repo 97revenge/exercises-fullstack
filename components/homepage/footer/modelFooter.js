@@ -13,33 +13,28 @@ export default function modelFooter() {
     title: document.createElement("title"),
   });
 
-  Global.prototype.elem = function (appender) {
-    const { div } = Global.prototype.constructor;
-    const elem = div.cloneNode(true);
-    appender.div = elem;
-    appender.appendChild(elem);
-    // console.log(appender);
+  const { div } = Global.prototype.constructor;
+
+  const appender = (appender, attach) => {
+    return appender.appendChild(attach);
   };
 
-  Global.prototype.item = function (appender) {
-    const { div } = Global.prototype.constructor;
-    const elem = div.cloneNode(true);
-    appender.appendChild(elem);
+  var instance = function (app, elemType) {
+    const elem = Object.create(Object.prototype.constructor);
+
+    return appender(app, div);
   };
 
-  Global.prototype.value = function (appender) {
-    const { div } = Global.prototype.constructor;
-    const elem = div.cloneNode(true);
-    appender.appendChild(elem);
-  };
+  instance(footer, div);
+  instance(footer, div);
 
-  const generateInstance = () => (instance = Global.prototype);
-  var instance = generateInstance(instance);
+  // Global.prototype.elem = function (appender) {
+  //   const elem = div.cloneNode(true);
+  //   appender.div = elem;
+  //   appender.appendChild(elem);
 
-  instance.elem(footer);
-  instance.elem(footer.div);
-  instance.elem(footer.div.div);
-  instance.elem(footer.div.div.div);
+  //   // console.log(appender);
+  // };
 
-  // console.log(footer);
+  console.log(Object.prototype.constructor);
 }
