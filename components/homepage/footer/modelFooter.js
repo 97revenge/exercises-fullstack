@@ -1,11 +1,11 @@
 export default function modelFooter() {
   const footer = document.querySelector("footer");
 
-  function Global() {
+  function Component() {
     return {};
   }
 
-  Global.prototype.constructor = new Object({
+  Component.prototype.constructor = new Object({
     div: document.createElement("div"),
     p: document.createElement("p"),
     img: document.createElement("img"),
@@ -13,28 +13,20 @@ export default function modelFooter() {
     title: document.createElement("title"),
   });
 
-  const { div } = Global.prototype.constructor;
+  const component = Object.assign(Component.prototype.constructor, {
+    brand: document.createElement("brand"),
+  });
 
-  const appender = (appender, attach) => {
-    return appender.appendChild(attach);
+  const appendElement = (appender, attach) => appender.appendChild(attach);
+
+  const newElement = (appender, elemType) => {
+    const element = component[elemType].cloneNode(false);
+    return appendElement(appender, element);
   };
 
-  var instance = function (app, elemType) {
-    const elem = Object.create(Object.prototype.constructor);
+  newElement(footer, "div");
 
-    return appender(app, div);
-  };
-
-  instance(footer, div);
-  instance(footer, div);
-
-  // Global.prototype.elem = function (appender) {
-  //   const elem = div.cloneNode(true);
-  //   appender.div = elem;
-  //   appender.appendChild(elem);
-
-  //   // console.log(appender);
-  // };
-
-  console.log(Object.prototype.constructor);
+  for (let i = 0; i <= 10; i++) {
+    newElement(footer.querySelectorAll("div")[i], "div");
+  }
 }
