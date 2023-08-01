@@ -32,7 +32,7 @@ function banner() {
       .get(`http://localhost:4000/${tag}`)
       .then((response) => response.data)
       .then((data) => {
-        const value = Object.values(data)[0];
+        const value = data["hero-section"];
         elem.style = value;
         return data;
       });
@@ -43,7 +43,7 @@ function banner() {
       .get(`http://localhost:4000/${tag}`)
       .then((response) => response.data)
       .then((data) => {
-        const value = Object.values(data)[1];
+        const value = data["frame-1"];
         elem.style = value;
         return data;
       });
@@ -54,7 +54,7 @@ function banner() {
       .get(`http://localhost:4000/${tag}`)
       .then((response) => response.data)
       .then((data) => {
-        const value = Object.values(data)[2];
+        const value = data["text"];
         elem.style = value;
         return data;
       });
@@ -65,8 +65,8 @@ function banner() {
       .get(`http://localhost:4000/${tag}`)
       .then((response) => response.data)
       .then((data) => {
-        const valueOne = Object.values(data)[3];
-        const valueTwo = Object.values(data)[4];
+        const valueOne = data["lessons-and-insights-fr"];
+        const valueTwo = data["where-to-grow-your-busin"];
 
         elemOne.style = valueOne;
         elemOne.innerHTML = `Aprenda os blocos de construção básicos do <code style="font-size: 55px; background-color:#4caf4f;"><u>Javascript</u></code> com exercícios divertidos!`;
@@ -86,7 +86,7 @@ function banner() {
       .get(`http://localhost:4000/${tag}`)
       .then((response) => response.data)
       .then((data) => {
-        const value = Object.values(data)[5];
+        const value = data["button"];
         elem.style = value;
         elem.setAttribute("href", "/exercises");
         elem.innerHTML = "Vamos Iniciar 🚀";
@@ -107,7 +107,7 @@ function banner() {
         .get(`http://localhost:4000/${tag}`)
         .then((response) => response.data)
         .then((data) => {
-          const value = Object.values(data)[6];
+          const value = data["illustration"];
           illustration.style = value;
         });
     };

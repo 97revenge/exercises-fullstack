@@ -25,15 +25,15 @@ window.onload = () => {
 
     "/while": () => {
       nav();
-      modelFooter();
+      controllerExercisesBanner();
     },
     "/for": () => {
       nav();
-      modelFooter();
+      controllerExercisesBanner();
     },
     "/ifelse": () => {
       nav();
-      modelFooter();
+      controllerExercisesBanner();
     },
   };
 
