@@ -13,6 +13,14 @@ export default function modelFooter() {
     title: document.createElement("title"),
   });
 
+  Object.prototype.constructor = new Object({
+    div: document.createElement("div"),
+    p: document.createElement("p"),
+    img: document.createElement("img"),
+    a: document.createElement("a"),
+    title: document.createElement("title"),
+  });
+
   const component = Object.assign(Component.prototype.constructor, {
     brand: document.createElement("brand"),
   });
@@ -26,7 +34,9 @@ export default function modelFooter() {
 
   newElement(footer, "div");
 
-  for (let i = 0; i <= 10; i++) {
+  for (let i = 0; i <= 1; i++) {
     newElement(footer.querySelectorAll("div")[i], "div");
   }
+
+  newElement(footer.querySelectorAll("div")[1], "div");
 }

@@ -3,11 +3,7 @@
 import axios from "axios";
 
 export default function exercisesStyleBanner() {
-  const div = document.createElement("div");
-
-  const heroSection = div.cloneNode(true);
-
-  document.body.appendChild(heroSection);
+  const div = document.getElementById("hero-section");
 
   const elemSection = (elem, tag = "banner") => {
     axios
@@ -20,5 +16,5 @@ export default function exercisesStyleBanner() {
       });
   };
 
-  elemSection(heroSection);
+  elemSection(div);
 }

@@ -1,5 +1,5 @@
-import exercisesModelFooter from "./components/exercises/banner/exercisesModelFooter";
-import exercisesStyleBanner from "./components/exercises/banner/exercisesStyleBanner";
+import controllerExercisesBanner from "./components/exercises/banner/controllerExercisesBanner";
+import styleExercisesBanner from "./components/exercises/banner/styleExercisesBanner";
 
 import { banner } from "./components/homepage/banner";
 import controllerFooter from "./components/homepage/footer/controllerFooter";
@@ -14,18 +14,13 @@ window.onload = () => {
   const routes = {
     "/": () => {
       nav();
-
       banner();
-
       section();
-
       controllerFooter();
     },
     "/exercises": () => {
       nav();
-      exercisesStyleBanner();
-      exercisesModelFooter();
-      modelFooter();
+      controllerExercisesBanner();
     },
 
     "/while": () => {

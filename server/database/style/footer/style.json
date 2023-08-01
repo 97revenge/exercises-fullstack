@@ -1,10 +1,11 @@
 {
   "footer-light-one-column": "display: flex; flex-direction:column; justify-content: flex-start; align-items: flex-start; widht:1440px; height: 361px; padding: 51px 252px 42px 100px; box-sizing:border-box; background-color: rgba(255, 255, 255, 1);",
   "group-755": "display: flex; flex-direction:column; box-sizing:border-box;",
-  "header-text": "display:flex; flex-direction:row; justify-content:flex-start; align-items:flex-start; gap:10px; height: 100%; box-sizing:border-box;",
+  "group-1079": "display: flex; flex-direction: row; width: 100%; box-sizing: border-box; background-color: green;",
+  "header-text": "box-sizing: border-box; height: 100%; gap: 10px; align-items: flex-start;  justify-content: center;  flex-direction: row; display: flex;",
   "header": "color: rgba(19, 19, 19, 1); font-size: 24px; line-height: 24px; font-family:Inter, sans-serif; font-wheight: 700;",
   "header-text-1": "display:flex; flex-direction: row; justify-content:flex-start; align-items: flex-start; gap:10px; height:100%; box-sizing: boder-box;",
-  "header-2": "color: rgba(19, 19, 19, 1); font-size: 24px; line-height: 24px; font-family: Inter, sans-serif; font-weight: 700; ",
+  "header-2": "color: rgba(19, 19, 19, 1); font-size: 24px; line-height: 24px; font-family: Inter, sans-serif; font-weight: 700; margin-left:50px;",
   "group-762": "display: flex; flex-direction: row;width: fit-content;box-sizing: border-box;",
   "body": "display: flex; flex-direction: row; align-items: center; gap: 10px;  height: fit-content; box-sizing: border-box;",
   "lorem-ipsum-dolor-sit-am": " color: rgba(19, 19, 19, 1); font-size: 18px; line-height: 18px;   font-family: Inter, sans-serif; font-weight: 400;",
