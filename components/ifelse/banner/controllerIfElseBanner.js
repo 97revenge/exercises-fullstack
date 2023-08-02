@@ -1,6 +1,9 @@
-export default function controllerIfElseBanner(params) {
+import modelIfElseBanner from "./modelIfElseBanner";
+import styleIfElseBanner from "./styleIfElseBanner";
+
+export default function controllerIfElseBanner() {
   return {
-    style: "",
-    model: "",
+    style: styleIfElseBanner(),
+    model: modelIfElseBanner(),
   };
 }

@@ -3,40 +3,36 @@
 import axios from "axios";
 
 export default function exercisesStyleBanner() {
-  const forBanner = document.querySelectorAll("#for-exercises")[0];
-  const test = document.querySelectorAll("#for-exercises");
-  console.log(test);
+  const forBanner = document.querySelectorAll("#for-exercises");
 
-  const WhileBanner = document.getElementById("while-exercises");
-  const ifElseBanner = document.getElementById("if-else-exercises");
+  const WhileBanner = document.querySelectorAll("#while-exercises");
+  const ifElseBanner = document.querySelectorAll("#if-else-exercises");
   const banner = document.querySelector("banner");
+
+  const allBanners = document.querySelectorAll("banner");
 
   const bannerElem = (elem, tag = "banner") => {
     axios
       .get(`http://localhost:4000/${tag}`)
       .then((response) => response.data)
       .then((data) => {
-        const value = data["figma-banner"];
-        elem.id = "figma-banner";
-        elem.style = value;
-
+        for (let i = 0; i < allBanners.length; i++) {
+          elem[i].style = data["figma-banner"];
+        }
         return data;
       });
   };
 
-  bannerElem(banner);
+  bannerElem(allBanners);
 
   const forSection = (elem, tag = "banner") => {
     axios
       .get(`http://localhost:4000/${tag}`)
       .then((response) => response.data)
       .then((data) => {
-        test[0].style = data["hero-section"];
-        test[1].style = data["hero-section"];
-        test[2].style = data["hero-section"];
-
-        // const value = data["hero-section"];
-        // elem.style = value;
+        elem[0].style = data["hero-section"];
+        elem[1].style = data["hero-section"];
+        elem[2].style = data["hero-section"];
         return data;
       });
   };
@@ -47,8 +43,9 @@ export default function exercisesStyleBanner() {
       .get(`http://localhost:4000/${tag}`)
       .then((response) => response.data)
       .then((data) => {
-        const value = data["hero-section"];
-        elem.style = value;
+        elem[0].style = data["hero-section"];
+        elem[1].style = data["hero-section"];
+        elem[2].style = data["hero-section"];
         return data;
       });
   };
@@ -60,8 +57,10 @@ export default function exercisesStyleBanner() {
       .get(`http://localhost:4000/${tag}`)
       .then((response) => response.data)
       .then((data) => {
-        const value = data["hero-section"];
-        elem.style = value;
+        elem[0].style = data["hero-section"];
+        elem[1].style = data["hero-section"];
+        elem[2].style = data["hero-section"];
+
         return data;
       });
   };

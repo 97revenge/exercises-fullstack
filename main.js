@@ -1,12 +1,19 @@
-import controllerExercisesBanner from "./components/exercises/banner/controllerExercisesBanner";
-import styleExercisesBanner from "./components/exercises/banner/styleExercisesBanner";
-
-import { banner } from "./components/homepage/banner";
+import { banner } from "./components/homepage/banner"; // refactor alert !!!
 import controllerFooter from "./components/homepage/footer/controllerFooter";
-import modelFooter from "./components/homepage/footer/modelFooter";
-import styleFooter from "./components/homepage/footer/styleFooter";
-import { nav } from "./components/homepage/nav";
-import section from "./components/homepage/section";
+import { nav } from "./components/homepage/nav"; // refactor alert !!!
+import section from "./components/homepage/section"; // refactor alert !!!
+
+/exercises/;
+import controllerExercisesBanner from "./components/exercises/banner/controllerExercisesBanner";
+
+/while/;
+import controllerWhileBanner from "./components/while/banner/controllerWhileBanner";
+
+/for/;
+import controllerForBanner from "./components/for/banner/controllerForBanner";
+
+/ifelse/;
+import controllerIfElseBanner from "./components/ifelse/banner/controllerIfElseBanner";
 
 import "./style.css";
 
@@ -20,20 +27,22 @@ window.onload = () => {
     },
     "/exercises": () => {
       nav();
-      controllerExercisesBanner();
+      controllerExercisesBanner(); // "esse funciona como o bloco total ...
+      //  ele precisa ser despedacado para while, for , e ifelse por enquanto,
+      // até o momento que essas relacoes forem declarativas."
     },
 
     "/while": () => {
       nav();
-      controllerExercisesBanner();
+      controllerWhileBanner();
     },
     "/for": () => {
       nav();
-      controllerExercisesBanner();
+      controllerForBanner();
     },
     "/ifelse": () => {
       nav();
-      controllerExercisesBanner();
+      controllerIfElseBanner();
     },
   };
 
