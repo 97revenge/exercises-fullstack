@@ -8,6 +8,7 @@ const style = {
   banner: require("./database/style/banner/style.json"),
   section: require("./database/style/section/style.json"),
   footer: require("./database/style/footer/style.json"),
+  card: require("./database/style/card/style.json"),
 };
 const db = require("./database/db.json");
 const img = require("./database/img.json");
@@ -60,5 +61,9 @@ app
     };
     res.status(201).json(created);
   });
+
+app.route("/card").get((req, res) => {
+  res.json(style.card);
+});
 
 app.listen(PORT, console.log("running"));
