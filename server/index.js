@@ -1,3 +1,4 @@
+const openapi = require("./openapi.json");
 const express = require("express");
 const cors = require("cors");
 const app = express();
@@ -10,6 +11,12 @@ app.use("/style", router);
 
 app.route("/db").get((req, res) => {
   res.json(img);
+});
+
+app.route("/api/servers").get((req, res) => {
+  const server = openapi.servers;
+
+  res.json(server);
 });
 
 app.listen(PORT, console.log("running"));

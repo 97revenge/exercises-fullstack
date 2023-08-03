@@ -1,0 +1,30 @@
+{
+  "openapi": "0.1.2",
+  "info": {
+    "title": "exercises-fullstack openapi boilerplate",
+    "description": "Criando o design de uma API de estilo usando os fundamentos do OpenAPI.",
+    "version": "0.1.2"
+  },
+  "servers": [
+    {
+      "url": "http://localhost:4000/style/banner",
+      "description": "/style/banner/style.json"
+    },
+    {
+      "url": "http://localhost:4000/style/card",
+      "description": "/style/card/style.json"
+    },
+    {
+      "url": "http://localhost:4000/style/footer",
+      "description": "/style/footer/style.json"
+    },
+    {
+      "url": "http://localhost:4000/style/nav",
+      "description": "/style/nav/style.json"
+    },
+    {
+      "url": "http://localhost:4000/style/section",
+      "description": "/style/section/style.json"
+    }
+  ]
+}
