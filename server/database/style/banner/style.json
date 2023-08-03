@@ -7,5 +7,6 @@
   "where-to-grow-your-busin": "  color: rgba(113, 113, 113, 1); font-size: 11.14px; line-height: 150%; font-family: Inter, sans-serif; font-weight: 400;",
   "button": "display: flex; flex-direction: row; justify-content: center; align-items: center; gap: 6.96px; width: fit-content; padding: 9.05px 21.58px; border-radius: 2.78px; box-sizing: border-box; background-color: #bfbfbf; margin-left:135px; margin-top:30px; position: relative; left: -63px; top: -33px;",
   "label": "  display: flex; flex-direction: column; justify-content: center; color: rgba(255, 255, 255, 1); font-size: 11.14px; line-height: 150%; font-family: Inter, sans-serif; font-weight: 500; text-align: center;",
-  "illustration": "width: 272.16px; height:100%;"
+  "illustration": "width: 272.16px; height:100%;",
+  "container": "display:flex; flex-direction:column; background-color:transparent; padding: 20px 55px;"
 }

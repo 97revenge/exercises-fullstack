@@ -91,6 +91,4 @@ export default function modelExercisesBanner() {
   newElement(ifElseBanner, "div", "if-else-exercises");
   newElement(ifElseBanner, "div", "if-else-exercises");
   newElement(ifElseBanner, "div", "if-else-exercises");
-
-  // banner.appendChild(heroSection);
 }

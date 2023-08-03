@@ -1,8 +1,10 @@
+const nav = require("./nav/style.json");
+
 const express = require("express");
 const router = express.Router();
 
-app.get("nav", (req, res) => {
-  res.json(style.nav);
+router.get("/nav", (req, res) => {
+  res.json(nav);
 });
 
 module.exports = router;

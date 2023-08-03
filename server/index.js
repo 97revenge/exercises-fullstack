@@ -3,6 +3,12 @@ const cors = require("cors");
 const app = express();
 const PORT = 4000;
 
+app.use(cors());
+
+const router = require("./database/style/style");
+
+app.use("/style", router);
+
 const style = {
   nav: require("./database/style/nav/style.json"),
   banner: require("./database/style/banner/style.json"),
@@ -13,8 +19,6 @@ const style = {
 const db = require("./database/db.json");
 const img = require("./database/img.json");
 
-app.use(cors());
-
 app
   .route(/footer/, (req, res) => {
     const id = req.params.id;
@@ -23,14 +27,6 @@ app
     res.json(style.footer);
   });
 
-app
-  .route(/nav/, (req, res) => {
-    const id = req.params.id;
-    console.log(id);
-  })
-  .get((req, res) => {
-    res.json(style.nav);
-  });
 app
   .route(/section/, (req, res) => {
     const id = req.params.id;

@@ -25,7 +25,7 @@ export function nav() {
   header.appendChild(titleDashboard);
 
   const headerNav = (tag = "nav") => {
-    axios(`http://localhost:4000/${tag}`, {
+    axios(`http://localhost:4000/style/${tag}`, {
       method: "GET",
 
       headers: {
@@ -40,7 +40,7 @@ export function nav() {
   };
   const elemShearch = (tag = "nav") => {
     axios
-      .get(`http://localhost:4000/${tag}`, {
+      .get(`http://localhost:4000/style/${tag}`, {
         headers: {
           "Content-Type": "application/json",
         },
@@ -55,7 +55,7 @@ export function nav() {
 
   const itemNav = (tag = "nav") => {
     axios
-      .get(`http://localhost:4000/${tag}`)
+      .get(`http://localhost:4000/style/${tag}`)
       .then((response) => response.data)
       .then((data) => {
         const value = Object.values(data)[2];
@@ -78,7 +78,7 @@ export function nav() {
 
     const elemImg = (tag = "nav") => {
       axios
-        .get(`http://localhost:4000/${tag}`)
+        .get(`http://localhost:4000/style/${tag}`)
         .then((response) => response.data)
         .then((data) => {
           const value = Object.values(data)[3];
@@ -91,7 +91,7 @@ export function nav() {
 
   const itemShearch = (elem, tag = "nav") => {
     axios
-      .get(`http://localhost:4000/${tag}`, {
+      .get(`http://localhost:4000/style/${tag}`, {
         headers: {
           // hasAuthorization: false,
         },
@@ -106,7 +106,7 @@ export function nav() {
   };
 
   const elemSideMenu = async (elem, tag = "nav") => {
-    const fetch = await fetch(`http://localhost:4000/${tag}`);
+    const fetch = await fetch(`http://localhost:4000/style/${tag}`);
 
     const response = await response.json();
 
@@ -129,7 +129,7 @@ export function nav() {
 
     const itemImg = function (tag = "nav") {
       axios
-        .get(`http://localhost:4000/${tag}`)
+        .get(`http://localhost:4000/style/${tag}`)
         .then((response) => response.data)
         .then((data) => {
           const value = Object.values(data)[6];

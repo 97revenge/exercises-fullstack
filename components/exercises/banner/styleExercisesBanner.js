@@ -4,12 +4,25 @@ import axios from "axios";
 
 export default function exercisesStyleBanner() {
   const forBanner = document.querySelectorAll("#for-exercises");
-
   const WhileBanner = document.querySelectorAll("#while-exercises");
   const ifElseBanner = document.querySelectorAll("#if-else-exercises");
-  const banner = document.querySelector("banner");
+
+  const div = document.querySelector("#banner-container");
 
   const allBanners = document.querySelectorAll("banner");
+
+  const container = (elem, tag = "banner") => {
+    axios
+      .get(`http://localhost:4000/${tag}`)
+      .then((response) => response.data)
+      .then((data) => {
+        elem.style = data["container"];
+
+        return data;
+      });
+  };
+
+  container(div);
 
   const bannerElem = (elem, tag = "banner") => {
     axios

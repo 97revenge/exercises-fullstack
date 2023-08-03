@@ -27,7 +27,12 @@ window.onload = () => {
     },
     "/exercises": () => {
       nav();
-      controllerExercisesBanner(); // "esse funciona como o bloco total ...
+      controllerExercisesBanner();
+      // controllerWhileBanner();
+      // controllerForBanner();
+      // controllerIfElseBanner();
+
+      // controllerExercisesBanner(); // "esse funciona como o bloco total ...
       //  ele precisa ser despedacado para while, for , e ifelse por enquanto,
       // até o momento que essas relacoes forem declarativas."
     },
