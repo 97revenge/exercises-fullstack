@@ -4,7 +4,7 @@ export default function styleFooter() {
   const footer = (tag = "footer") => {
     const footer = document.querySelector("footer");
     axios
-      .get(`http://localhost:4000/${tag}`)
+      .get(`http://localhost:4000/style/${tag}`)
       .then((response) => response.data)
       .then((data) => {
         const value = data["footer-light-one-column"];
@@ -20,7 +20,7 @@ export default function styleFooter() {
     const footer = document.querySelector("footer");
     const div = footer.querySelectorAll("div")[0];
 
-    axios(`http://localhost:4000/${tag}`, {
+    axios(`http://localhost:4000/style/${tag}`, {
       method: "GET",
     })
       .then((response) => response.data)
@@ -36,7 +36,7 @@ export default function styleFooter() {
     const footer = document.querySelector("footer");
     const div = footer.querySelectorAll("div")[1];
 
-    axios(`http://localhost:4000/${tag}`, {
+    axios(`http://localhost:4000/style/${tag}`, {
       method: "GET",
     })
       .then((response) => response.data)
@@ -53,7 +53,7 @@ export default function styleFooter() {
     const div = footer.querySelectorAll("div")[2];
     console.log(div);
 
-    axios(`http://localhost:4000/${tag}`, {
+    axios(`http://localhost:4000/style/${tag}`, {
       method: "GET",
     })
       .then((response) => response.data)
@@ -78,7 +78,7 @@ export default function styleFooter() {
     const div = footer.querySelectorAll("div")[3];
     console.log(div);
 
-    axios(`http://localhost:4000/${tag}`, {
+    axios(`http://localhost:4000/style/${tag}`, {
       method: "GET",
     })
       .then((response) => response.data)
@@ -114,4 +114,6 @@ export default function styleFooter() {
         return value;
       });
   };
+
+  valueItem();
 }

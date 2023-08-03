@@ -10,7 +10,7 @@ export default function styleWhileBanner() {
 
   const bannerElem = (elem, tag = "banner") => {
     axios
-      .get(`http://localhost:4000/${tag}`)
+      .get(`http://localhost:4000/style/${tag}`)
       .then((response) => response.data)
       .then((data) => {
         elem.style = data["figma-banner"];
@@ -22,7 +22,7 @@ export default function styleWhileBanner() {
 
   const forSection = (tag = "banner") => {
     axios
-      .get(`http://localhost:4000/${tag}`)
+      .get(`http://localhost:4000/style/${tag}`)
       .then((response) => response.data)
       .then((data) => {
         for (let i = 0; i <= 2; i++) {

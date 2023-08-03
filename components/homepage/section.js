@@ -7,7 +7,7 @@ export default function section() {
 
   const elemSection = (tag = "section") => {
     axios
-      .get(`http://localhost:4000/${tag}`)
+      .get(`http://localhost:4000/style/${tag}`)
       .then((response) => response.data)
       .then((data) => {
         for (let i = 0; i <= section.length; i++) {
@@ -49,32 +49,6 @@ export default function section() {
 
         return data;
       });
-  };
-
-  const glideComponent = () => {
-    const value = Object.create({});
-    const glide = div.cloneNode(false);
-
-    value.whileGlide = glide.cloneNode(true);
-    value.forGlide = glide.cloneNode(true);
-    value.ifGlide = glide.cloneNode(true);
-
-    const result = Object.values(value).map((item, index) => {
-      item.classList.add("glide");
-      item.innerHTML = `
-      <div data-glide-el="track" class="glide__track">
-      <ul class="glide__slides">
-        <li class="glide__slide">🚀</li>
-        <li class="glide__slide">🐱‍🚀</li>
-        <li class="glide__slide">👩🏻‍🚀</li>
-      </ul>
-      </div>
-      `;
-
-      section[index].appendChild(item);
-    });
-
-    return result;
   };
 
   elemSection();

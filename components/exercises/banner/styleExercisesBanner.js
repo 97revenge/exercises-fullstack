@@ -13,7 +13,7 @@ export default function exercisesStyleBanner() {
 
   const container = (elem, tag = "banner") => {
     axios
-      .get(`http://localhost:4000/${tag}`)
+      .get(`http://localhost:4000/style/${tag}`)
       .then((response) => response.data)
       .then((data) => {
         elem.style = data["container"];
@@ -26,7 +26,7 @@ export default function exercisesStyleBanner() {
 
   const bannerElem = (elem, tag = "banner") => {
     axios
-      .get(`http://localhost:4000/${tag}`)
+      .get(`http://localhost:4000/style/${tag}`)
       .then((response) => response.data)
       .then((data) => {
         for (let i = 0; i < allBanners.length; i++) {
@@ -40,7 +40,7 @@ export default function exercisesStyleBanner() {
 
   const forSection = (elem, tag = "banner") => {
     axios
-      .get(`http://localhost:4000/${tag}`)
+      .get(`http://localhost:4000/style/${tag}`)
       .then((response) => response.data)
       .then((data) => {
         elem[0].style = data["hero-section"];
@@ -53,7 +53,7 @@ export default function exercisesStyleBanner() {
 
   const whileSection = (elem, tag = "banner") => {
     axios
-      .get(`http://localhost:4000/${tag}`)
+      .get(`http://localhost:4000/style/${tag}`)
       .then((response) => response.data)
       .then((data) => {
         elem[0].style = data["hero-section"];
@@ -67,7 +67,7 @@ export default function exercisesStyleBanner() {
 
   const ifSection = (elem, tag = "banner") => {
     axios
-      .get(`http://localhost:4000/${tag}`)
+      .get(`http://localhost:4000/style/${tag}`)
       .then((response) => response.data)
       .then((data) => {
         elem[0].style = data["hero-section"];

@@ -29,7 +29,7 @@ function banner() {
 
   const elemSection = (elem, tag = "banner") => {
     axios
-      .get(`http://localhost:4000/${tag}`)
+      .get(`http://localhost:4000/style/${tag}`)
       .then((response) => response.data)
       .then((data) => {
         const value = data["hero-section"];
@@ -51,7 +51,7 @@ function banner() {
 
   const itemText = (elem, tag = "banner") => {
     axios
-      .get(`http://localhost:4000/${tag}`)
+      .get(`http://localhost:4000/style/${tag}`)
       .then((response) => response.data)
       .then((data) => {
         const value = data["text"];
@@ -62,7 +62,7 @@ function banner() {
 
   const itemParagraph = (elemOne, elemTwo, tag = "banner") => {
     axios
-      .get(`http://localhost:4000/${tag}`)
+      .get(`http://localhost:4000/style/${tag}`)
       .then((response) => response.data)
       .then((data) => {
         const valueOne = data["lessons-and-insights-fr"];
@@ -83,7 +83,7 @@ function banner() {
 
   const itemButton = (elem, tag = "banner") => {
     axios
-      .get(`http://localhost:4000/${tag}`)
+      .get(`http://localhost:4000/style/${tag}`)
       .then((response) => response.data)
       .then((data) => {
         const value = data["button"];
@@ -104,7 +104,7 @@ function banner() {
 
     const elemStyle = (tag = "banner") => {
       axios
-        .get(`http://localhost:4000/${tag}`)
+        .get(`http://localhost:4000/style/${tag}`)
         .then((response) => response.data)
         .then((data) => {
           const value = data["illustration"];
