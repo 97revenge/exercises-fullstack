@@ -8,22 +8,32 @@
   "servers": [
     {
       "url": "http://localhost:4000/style/banner",
+      "name": "banner",
+      "id": 0,
       "description": "/style/banner/style.json"
     },
     {
       "url": "http://localhost:4000/style/card",
+      "name": "card",
+      "id": 1,
       "description": "/style/card/style.json"
     },
     {
       "url": "http://localhost:4000/style/footer",
+      "name": "footer",
+      "id": 2,
       "description": "/style/footer/style.json"
     },
     {
       "url": "http://localhost:4000/style/nav",
+      "name": "nav",
+      "id": 3,
       "description": "/style/nav/style.json"
     },
     {
       "url": "http://localhost:4000/style/section",
+      "name": "section",
+      "id": 4,
       "description": "/style/section/style.json"
     }
   ]

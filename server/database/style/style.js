@@ -7,13 +7,15 @@ const card = require("./card/style.json");
 const express = require("express");
 const router = express.Router();
 
-router.get("/nav", (req, res) => {
+// const { version } = nav;
+router.get("/nav/", (req, res) => {
   res.json(nav);
 });
 
 router.get("/banner", (req, res) => {
   res.json(banner);
 });
+
 router.get("/section", (req, res) => {
   res.json(section);
 });

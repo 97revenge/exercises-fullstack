@@ -40,7 +40,7 @@ function banner() {
 
   const itemFrame = (elem, tag = "banner") => {
     axios
-      .get(`http://localhost:4000/${tag}`)
+      .get(`http://localhost:4000/style/${tag}`)
       .then((response) => response.data)
       .then((data) => {
         const value = data["frame-1"];
