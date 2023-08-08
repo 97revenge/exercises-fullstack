@@ -7,6 +7,9 @@ const img = require("./database/img.json");
 const database = require("./database/database");
 const style = require("./database/style/style");
 const exercises = require("./database/exercises/exercises");
+const newBanner = require("./database/style/banner/banner");
+
+app.use("/", newBanner);
 
 app.use(cors());
 

@@ -7,7 +7,6 @@ const card = require("./card/style.json");
 const express = require("express");
 const router = express.Router();
 
-// const { version } = nav;
 router.get("/nav/", (req, res) => {
   res.json(nav);
 });
@@ -27,5 +26,7 @@ router.get("/footer", (req, res) => {
 router.get("/card", (req, res) => {
   res.json(card);
 });
+
+// router.use("/style");
 
 module.exports = router;

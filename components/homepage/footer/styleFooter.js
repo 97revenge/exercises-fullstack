@@ -91,7 +91,7 @@ export default function styleFooter() {
           div.appendChild(instance);
           instance.style = data["header-2"];
           instance.innerHTML = `
-          <strong>Exercicios recentes</strong>
+          <strong>${String(window.location.href).toLocaleUpperCase()}</strong>
           `;
         };
         pItem();

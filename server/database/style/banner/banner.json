@@ -1,0 +1,15 @@
+{
+  "card": "display:flex; flex-direction:column; gap:10px; max-width: fit-content;  background-color: #d5d5d5;  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);     border: 1px solid transparent;   text-decoration: none; border-radius:20px;",
+  "content": "padding: 1.1rem;",
+  "image": " border-radius:15px 0px;  background-color: #4caf4f; height: 120px;  width: 100%; object-fit: cover; object-fit: cover;",
+  "title": "color: #111827; font-size: 1.125rem; line-height: 1.75rem; font-weight: 600;",
+  "desc": "display:flex; color: #111827; font-size: 0.850rem; line-height: 1.75rem; font-weight: 600; ",
+  "description": "position:relative;  font-size: 0.750rem; font-weight:300; margin-top:10px;",
+  "action": "display: inline-flex; margin-top: 1rem; color: #ffffff; font-size: 0.875rem; line-height: 1.25rem; font-weight: 500; align-items: center; gap: 0.25rem;background-color: #2563EB; padding: 4px 8px; border-radius: 4px; ",
+  "data-action": {
+    "span": " transition: .3s ease;"
+  },
+  "action-hover-span": {
+    "hover-span": "transform: translatex(4px);"
+  }
+}

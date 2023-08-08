@@ -43,18 +43,22 @@ window.onload = () => {
     "/while": () => {
       nav();
       controllerWhileBanner();
+      controllerFooter();
     },
     "/for": () => {
       nav();
       controllerForBanner();
+      controllerFooter();
     },
     "/ifelse": () => {
       nav();
       controllerIfElseBanner();
+      controllerFooter();
     },
 
     "/ifelse/exercise#1": () => {
       nav();
+      controllerFooter();
     },
   };
 
