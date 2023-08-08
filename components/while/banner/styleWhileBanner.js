@@ -2,11 +2,13 @@ import axios from "axios";
 export default function styleWhileBanner() {
   const whileBanner = document.querySelectorAll("banner")[0];
 
-  const whileContainer = document.querySelector("#banner-container");
+  const whileItem = document.querySelectorAll("#while-exercises");
 
-  const div = document.createElement("div");
-
-  console.log(whileBanner);
+  const heroSection = whileBanner.querySelectorAll("div")[1];
+  heroSection.style.display = "flex";
+  heroSection.style.gap = "75px";
+  heroSection.style.alignItems = "center";
+  // heroSection.style.marginTop = "200px";
 
   const bannerElem = (elem, tag = "banner") => {
     axios
@@ -20,19 +22,17 @@ export default function styleWhileBanner() {
   };
   bannerElem(whileBanner);
 
-  const forSection = (tag = "banner") => {
+  const bannerItem = (elem, tag = "banner") => {
     axios
       .get(`http://localhost:4000/style/${tag}`)
       .then((response) => response.data)
       .then((data) => {
-        for (let i = 0; i <= 2; i++) {
-          const index = div.cloneNode(true);
-          index.style = data["hero-section"];
-          index.id = "while-item";
-        }
-
+        elem[0].style = data["hero-section"];
+        elem[1].style = data["hero-section"];
+        elem[2].style = data["hero-section"];
         return data;
       });
   };
-  forSection(whileBanner);
+
+  bannerItem(whileItem);
 }

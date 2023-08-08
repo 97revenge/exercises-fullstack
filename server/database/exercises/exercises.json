@@ -1,0 +1,62 @@
+{
+  "while": [
+    {
+      "id": 1,
+      "name": "Contagem Crescente",
+      "author": "Matheus Pereira",
+      "description": "Programa exibe sequência ascendente entre valores."
+    },
+    {
+      "id": 2,
+      "name": "Adivinhe o Número",
+      "author": "Matheus Pereira",
+      "description": "Jogo de adivinhação interativo com dicas numéricas."
+    },
+    {
+      "id": 3,
+      "name": "Tabuada Interativa",
+      "author": "Matheus Pereira",
+      "description": "Pratique multiplicação com exibição interativa de tabuada"
+    }
+  ],
+  "for": [
+    {
+      "id": 4,
+      "name": "Soma dos Ímpares",
+      "author": "Matheus Pereira",
+      "description": "Calcule a soma dos números ímpares em um intervalo definido."
+    },
+    {
+      "id": 5,
+      "name": "Padrão de Estrelas",
+      "author": "Matheus Pereira",
+      "description": "Crie um padrão visual usando um loop `for` e caracteres."
+    },
+    {
+      "id": 6,
+      "name": "contagem regressiva",
+      "author": "Matheus Pereira",
+      "description": "Conte de um número inicial até zero usando um loop `for`."
+    }
+  ],
+  "ifelse": [
+    {
+      "id": 7,
+      "name": "Verificação de Idade",
+      "author": "Matheus Pereira",
+      "description": "Determine se a idade atende ao critério estabelecido para permissão."
+    },
+    {
+      "id": 8,
+      "name": "Classificação de Notas",
+      "author": "Matheus Pereira",
+      "description": "Avalie notas e forneça feedback com base em intervalos predefinidos."
+    },
+    {
+      "id": 9,
+      "name": "Decisão de Compra",
+      "author": "Matheus Pereira",
+      "description": "Decida se um produto é acessível comparando seu preço com o orçamento disponível."
+    }
+  ]
+}

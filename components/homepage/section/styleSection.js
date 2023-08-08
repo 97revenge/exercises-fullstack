@@ -3,7 +3,20 @@ import axios from "axios";
 export default function section() {
   const section = document.querySelectorAll("section");
 
-  const div = document.createElement("div");
+  const container = document.querySelector("#section-container");
+
+  const elemContainer = (elem, tag = "section") => {
+    axios
+      .get(`http://localhost:4000/style/${tag}`)
+      .then((response) => response.data)
+      .then((data) => {
+        const value = data["container"];
+        elem.style = value;
+        return value;
+      });
+  };
+
+  elemContainer(container);
 
   const elemSection = (tag = "section") => {
     axios
@@ -11,14 +24,14 @@ export default function section() {
       .then((response) => response.data)
       .then((data) => {
         for (let i = 0; i <= section.length; i++) {
-          const arr = ["WHILE", "FOR", "IF/ELSE"];
+          const arr = ["while", "for", "ifelse"];
           section[i].innerHTML = `
           <style>
           
           </style>
-          <a href="/while" style="color: white">
-          <strong style="font-size: 55px"
-            >Exercicios <code>${arr[i]}</code>
+          <a href="/${arr[i]}" style="color: white">
+          <strong style="font-size: 25px"
+            >Exercicios <code>${String(arr[i].toLocaleUpperCase())}</code>
           </strong></a
         >
           

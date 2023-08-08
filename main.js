@@ -1,9 +1,10 @@
 import { banner } from "./components/homepage/banner"; // refactor alert !!!
 import controllerFooter from "./components/homepage/footer/controllerFooter";
 import { nav } from "./components/homepage/nav"; // refactor alert !!!
-import section from "./components/homepage/section"; // refactor alert !!!
+import section from "./components/homepage/section/styleSection"; // refactor alert !!!
+/homepage/;
+import controllerSection from "./components/homepage/section/controllerSection";
 
-/exercises/;
 import controllerExercisesBanner from "./components/exercises/banner/controllerExercisesBanner";
 
 /while/;
@@ -22,15 +23,17 @@ window.onload = () => {
     "/": () => {
       nav();
       banner();
-      section();
+      controllerSection();
       controllerFooter();
     },
     "/exercises": () => {
       nav();
       controllerExercisesBanner();
-      // controllerWhileBanner();
-      // controllerForBanner();
-      // controllerIfElseBanner();
+
+      controllerWhileBanner();
+      controllerForBanner();
+      controllerIfElseBanner();
+      controllerFooter();
 
       // controllerExercisesBanner(); // "esse funciona como o bloco total ...
       //  ele precisa ser despedacado para while, for , e ifelse por enquanto,
@@ -48,6 +51,10 @@ window.onload = () => {
     "/ifelse": () => {
       nav();
       controllerIfElseBanner();
+    },
+
+    "/ifelse/exercise#1": () => {
+      nav();
     },
   };
 

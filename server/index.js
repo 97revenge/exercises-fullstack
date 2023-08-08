@@ -6,11 +6,15 @@ const PORT = 4000;
 const img = require("./database/img.json");
 const database = require("./database/database");
 const style = require("./database/style/style");
+const exercises = require("./database/exercises/exercises");
+
 app.use(cors());
 
 app.use("/style", style);
 
 app.use("/database", database);
+
+app.use("/", exercises);
 
 app.route("/db").get((req, res) => {
   res.json(img);

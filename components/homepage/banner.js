@@ -6,6 +6,8 @@ export const heroSection = div.cloneNode(true);
 function banner() {
   const banner = document.querySelector("banner");
 
+  const container = heroSection.cloneNode(false);
+
   const p = document.createElement("p");
   const btn = document.createElement("a");
   const img = document.createElement("img");
@@ -25,7 +27,8 @@ function banner() {
   heroSection.appendChild(illustration);
   heroSection.appendChild(frameOne);
 
-  banner.appendChild(heroSection);
+  container.appendChild(heroSection);
+  banner.appendChild(container);
 
   const elemSection = (elem, tag = "banner") => {
     axios
