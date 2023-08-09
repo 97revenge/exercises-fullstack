@@ -11,6 +11,7 @@ export default function modelifElseBanner() {
     img: document.createElement("img"),
     a: document.createElement("a"),
     title: document.createElement("title"),
+    button: document.createElement("button"),
   });
 
   const component = Object.assign(Component.prototype.constructor);
@@ -52,7 +53,7 @@ export default function modelifElseBanner() {
     return appendElement(appender, elem);
   };
 
-  const one = newElement(bannerElem, "div", "ifElse-exercises");
+  newElement(bannerElem, "div", "ifElse-exercises");
   newElement(bannerElem, "div", "ifElse-exercises");
   newElement(bannerElem, "div", "ifElse-exercises");
 
@@ -63,22 +64,52 @@ export default function modelifElseBanner() {
 
   const bannerTitle = document.createElement("p");
 
-  one.appendChild(bannerItem);
   console.log(bannerItem);
   bannerItem.class();
   bannerItem.appendChild(bannerTitle);
 
   const containerCard = document.querySelectorAll("#ifElse-exercises");
 
-  const cardElem = [...containerCard].map((item, index) =>
-    newElement(item, "div", `elem${index}`)
+  const cardElem = [...containerCard].map((item) =>
+    newElement(item, "div", `elem${item.id.slice(-5)}`)
   );
+  const elemcises = document.querySelectorAll("#elemcises");
+
+  const cardItem = [...elemcises].map((item) => {
+    return newElement(item, "img", `img${item.id.slice(-5)}`);
+  });
+
+  const contentValue = [...elemcises].map((item) => {
+    return newElement(item, "div", `value${item.id.slice(-4)}`);
+  });
+
+  const valueises = document.querySelectorAll("#valueises");
+
+  const contentTitle = [...valueises].map((item) => {
+    return newElement(item, "a", `title${item.id.slice(-4)}`);
+  });
+
+  const contentAuthor = [...valueises].map((item) => {
+    return newElement(item, "a", `author${item.id.slice(-4)}`);
+  });
+
+  const contentDescription = [...valueises].map((item) => {
+    return newElement(item, "a", `description${item.id.slice(-4)}`);
+  });
+
+  const buttonAction = [...valueises].map((item) => {
+    return newElement(item, "button", `button${item.id.slice(-4)}`);
+  });
 
   return {
     cardElem,
+    cardItem,
+    contentValue,
+    contentTitle,
+    contentAuthor,
+    contentDescription,
+    buttonAction,
   };
-
-  console.log(result);
 
   // const result = value.map((item, index) => {
   //   newElement(item[i], "div", "elem");

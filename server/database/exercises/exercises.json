@@ -41,18 +41,21 @@
   ],
   "ifelse": [
     {
+      "img": "https://blog.bighouseweb.com.br/wp-content/uploads/2022/01/Linguagens-de-programacao-1140x660.jpg",
       "id": 7,
       "name": "Verificação de Idade",
       "author": "Matheus Pereira",
       "description": "Determine se a idade atende ao critério estabelecido para permissão."
     },
     {
+      "img": "https://idocode.com.br/wp-content/uploads/2021/07/programacao-scaled.jpg",
       "id": 8,
       "name": "Classificação de Notas",
       "author": "Matheus Pereira",
       "description": "Avalie notas e forneça feedback com base em intervalos predefinidos."
     },
     {
+      "img": "https://programadoresdepre.com.br/wp-content/uploads/2022/06/linguagem-de-programacao.jpg",
       "id": 9,
       "name": "Decisão de Compra",
       "author": "Matheus Pereira",

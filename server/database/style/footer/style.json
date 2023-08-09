@@ -1,5 +1,5 @@
 {
-  "footer-light-one-column": "display: flex; flex-direction:column; justify-content: flex-start; align-items: flex-start; widht:1440px; height: 361px; padding: 51px 252px 42px 100px; box-sizing:border-box; background-color: rgba(255, 255, 255, 1);",
+  "footer-light-one-column": "display: flex; flex-direction:column; justify-content: flex-end; align-items: center; align-content:stretch; widht:1440px; height: 361px; padding: 51px 252px 42px 100px; box-sizing:border-box; background-color: rgba(255, 255, 255, 1);",
   "group-755": "display: flex; flex-direction:column; box-sizing:border-box;",
   "group-1079": "display: flex; flex-direction: row; width: 100%; box-sizing: border-box; background-color: green;",
   "header-text": "box-sizing: border-box; height: 100%; gap: 10px; align-items: flex-start;  justify-content: center;  flex-direction: row; display: flex;",

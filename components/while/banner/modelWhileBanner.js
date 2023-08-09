@@ -93,6 +93,7 @@ export default function modelWhileBanner() {
      </span>
    </a>
    <span style="display:flex;
+  
    color: #111827;
    font-size: 0.850rem;
    line-height: 1.75rem;
