@@ -50,7 +50,7 @@ export default function styleifElseBanner() {
 
   bannerItem(ifElseItem);
 
-  const cardElem = (tag) => {
+  const cardElem = () => {
     axios
       .get(`http://localhost:4000/exercises/banner/`)
       .then((response) => response.data)
@@ -61,7 +61,7 @@ export default function styleifElseBanner() {
         return data;
       });
   };
-  cardElem("card");
+  cardElem();
 
   const imgItem = () => {
     axios
@@ -72,8 +72,8 @@ export default function styleifElseBanner() {
         value.forEach((item) => {
           item.setAttribute("style", data["image"]);
           axios
-            .get(`http://localhost:4000/exercises/`)
             .then((response) => response.data)
+            .get(`http://localhost:4000/exercises/`)
             .then((data) => {
               item.setAttribute(
                 "src",
@@ -114,7 +114,7 @@ export default function styleifElseBanner() {
             .then((response) => response.data)
             .then((data) => {
               const { ifelse } = data;
-              item.innerHTML = `carregando...`;
+              item.innerHTML = `carregando...💭`;
               setTimeout(() => {
                 item.innerHTML = ifelse[index].name;
               }, 1500);
@@ -143,7 +143,7 @@ export default function styleifElseBanner() {
               item.innerHTML = `Carregando...`;
               console.log(ifelse[index].author);
               setTimeout(() => {
-                item.innerHTML = `<U>🗣: </U> ${ifelse[index].author}`;
+                item.innerHTML = `<U>Author:   </U> ${ifelse[index].author}`;
               }, 1600);
             });
         });
@@ -181,7 +181,7 @@ export default function styleifElseBanner() {
       .then((response) => response.data)
       .then((data) => {
         const value = [...buttonises];
-        value.forEach((item, index) => {
+        value.forEach((item) => {
           item.style = data["action"];
           item.innerHTML = `Vamos nessa 🚀`;
           item.addEventListener("click", () => {

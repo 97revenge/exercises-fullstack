@@ -10,6 +10,20 @@ export default function styleWhileBanner() {
   heroSection.style.alignItems = "center";
   // heroSection.style.marginTop = "200px";
 
+  const elemWhile = document.querySelectorAll("#elemWhile");
+
+  const imgWhile = document.querySelectorAll("#imgWhile");
+
+  const valueWhile = document.querySelectorAll("#valueWhile");
+
+  const titleWhile = document.querySelectorAll("#titleWhile");
+
+  const authorWhile = document.querySelectorAll("#authorWhile");
+
+  const descriptionWhile = document.querySelectorAll("#descriptionWhile");
+
+  const buttonWhile = document.querySelectorAll("#buttonWhile");
+
   const bannerElem = (elem, tag = "banner") => {
     axios
       .get(`http://localhost:4000/style/${tag}`)
@@ -35,4 +49,136 @@ export default function styleWhileBanner() {
   };
 
   bannerItem(whileItem);
+
+  const cardElem = () => {
+    axios
+      .get(`http://localhost:4000/exercises/banner/`)
+      .then((response) => response.data)
+      .then((data) => {
+        const value = [...elemWhile];
+        value.forEach((item) => {
+          item.style = data["card"];
+        });
+      });
+  };
+  cardElem();
+
+  const imgItem = () => {
+    axios
+      .get(`http://localhost:4000/exercises/banner/`)
+      .then((response) => response.data)
+      .then((data) => {
+        const value = [...imgWhile];
+        value.forEach((item) => {
+          item.setAttribute("style", data["image"]);
+          item.setAttribute(
+            "src",
+            "https://s3-sa-east-1.amazonaws.com/season-training/images/blog/blog-10.png"
+          );
+        });
+      });
+  };
+  imgItem();
+
+  const cardValue = () => {
+    axios
+      .get(`http://localhost:4000/exercises/banner/`)
+      .then((response) => response.data)
+      .then((data) => {
+        const value = [...valueWhile];
+        value.forEach((item) => {
+          item.style = data["content"];
+        });
+      });
+  };
+  cardValue();
+
+  const cardTitle = () => {
+    axios
+      .get(`http://localhost:4000/exercises/banner/`)
+      .then((response) => response.data)
+      .then((data) => {
+        const value = [...titleWhile];
+        value.forEach((item, index) => {
+          item.style = data["title"];
+          axios
+            .get(`http://localhost:4000/exercises/`)
+            .then((response) => response.data)
+            .then((data) => {
+              const { while: wl } = data;
+              item.innerHTML = `carregando...💭`;
+              setTimeout(() => {
+                item.innerHTML = wl[index].name;
+              }, 1500);
+              return data;
+            });
+        });
+        return data;
+      });
+  };
+  cardTitle();
+
+  const cardAuthor = () => {
+    axios
+      .get(`http://localhost:4000/exercises/banner/`)
+      .then((response) => response.data)
+      .then((data) => {
+        const value = [...authorWhile];
+        value.forEach((item, index) => {
+          item.style = data["desc"];
+          axios
+            .get(`http://localhost:4000/exercises/`)
+            .then((response) => response.data)
+            .then((data) => {
+              const { while: wl } = data;
+              item.innerHTML = `Carregando...💭`;
+              setTimeout(() => {
+                item.innerHTML = `<a>Author:</a>  ${wl[index].author}`;
+              }, 1300);
+            });
+        });
+      });
+  };
+  cardAuthor();
+
+  const cardDescription = () => {
+    axios
+      .get(`http://localhost:4000/exercises/banner/`)
+      .then((response) => response.data)
+      .then((data) => {
+        const value = [...descriptionWhile];
+        value.forEach((item, index) => {
+          item.style = data["description"];
+          axios
+            .get(`http://localhost:4000/exercises/`)
+            .then((response) => response.data)
+            .then((data) => {
+              const { while: wl } = data;
+              item.innerHTML = `Carregando...💭`;
+              setTimeout(() => {
+                item.innerHTML = wl[index].description;
+              }, 1100);
+            });
+        });
+      });
+  };
+  cardDescription();
+
+  const buttonAction = () => {
+    axios
+      .get(`http://localhost:4000/exercises/banner/`)
+      .then((response) => response.data)
+      .then((data) => {
+        const value = [...buttonWhile];
+        value.forEach((item) => {
+          item.style = data["action"];
+          item.innerHTML = `Vamos nessa 🚀`;
+          item.addEventListener("click", function () {
+            return alert(`voce clicou em algum exercicio`);
+          });
+        });
+      });
+  };
+
+  buttonAction();
 }

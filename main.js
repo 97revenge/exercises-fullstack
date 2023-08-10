@@ -1,7 +1,7 @@
 import { banner } from "./components/homepage/banner"; // refactor alert !!!
 import controllerFooter from "./components/homepage/footer/controllerFooter";
 import { nav } from "./components/homepage/nav"; // refactor alert !!!
-import section from "./components/homepage/section/styleSection"; // refactor alert !!!
+
 /homepage/;
 import controllerSection from "./components/homepage/section/controllerSection";
 
@@ -28,7 +28,6 @@ window.onload = () => {
     },
     "/exercises": () => {
       nav();
-      controllerExercisesBanner();
 
       controllerWhileBanner();
       controllerForBanner();
@@ -53,11 +52,6 @@ window.onload = () => {
     "/ifelse": () => {
       nav();
       controllerIfElseBanner();
-      controllerFooter();
-    },
-
-    "/ifelse/exercise#1": () => {
-      nav();
       controllerFooter();
     },
   };

@@ -10,6 +10,12 @@ export default function styleForBanner() {
   heroSection.style.alignItems = "center";
   // heroSection.style.marginTop = "200px";
 
+  const elemFor = document.querySelectorAll("#elemFor");
+
+  const imgFor = document.querySelectorAll("#imgFor");
+
+  const valueFor = document.querySelectorAll("#valueFor");
+
   const bannerElem = (elem, tag = "banner") => {
     axios
       .get(`http://localhost:4000/style/${tag}`)
@@ -36,4 +42,52 @@ export default function styleForBanner() {
   };
 
   bannerItem(forItem);
+
+  const cardElem = () => {
+    axios
+      .get(`http://localhost:4000/exercises/banner/`)
+      .then((response) => response.data)
+      .then((data) => {
+        const value = [...elemFor];
+        value.forEach((item) => {
+          item.style = data["card"];
+        });
+      });
+  };
+  cardElem();
+
+  const imgItem = () => {
+    axios
+      .get(`http://localhost:4000/exercises/banner/`)
+      .then((response) => response.data)
+      .then((data) => {
+        const value = [...imgFor];
+        value.forEach((item, index) => {
+          item.setAttribute("style", data["image"]);
+          axios
+            .get(`http://localhost:4000/exercises/`)
+            .then((response) => response.data)
+            .then((data) => {
+              const { ifelse: ie } = data;
+              console.log(ie[index].img);
+              item.setAttribute("src", ie[index].img);
+            });
+        });
+      });
+  };
+  imgItem();
+
+  const cardValue = () => {
+    axios
+      .get(`http://localhost:4000/exercises/banner/`)
+      .then((response) => response.data)
+      .then((data) => {
+        const value = [...valueFor];
+        value.forEach((item) => {
+          item.style = data["content"];
+        });
+      });
+  };
+
+  cardValue();
 }

@@ -74,6 +74,7 @@ export default function modelifElseBanner() {
     newElement(item, "div", `elem${item.id.slice(-5)}`)
   );
   const elemcises = document.querySelectorAll("#elemcises");
+  // 👆🏻 elemwhile
 
   const cardItem = [...elemcises].map((item) => {
     return newElement(item, "img", `img${item.id.slice(-5)}`);
@@ -84,6 +85,7 @@ export default function modelifElseBanner() {
   });
 
   const valueises = document.querySelectorAll("#valueises");
+  // 👆🏻 valueWhile
 
   const contentTitle = [...valueises].map((item) => {
     return newElement(item, "a", `title${item.id.slice(-4)}`);

@@ -63,77 +63,30 @@ export default function modelForBanner() {
 
   const bannerTitle = document.createElement("p");
 
-  one.appendChild(bannerItem);
-  console.log(bannerItem);
   bannerItem.class();
   bannerItem.appendChild(bannerTitle);
 
-  const value = document.querySelectorAll("#for-exercises");
+  const containerCard = document.querySelectorAll("#for-exercises");
 
-  value.forEach((item) => {
-    item.innerHTML = `
-    
-    <div style="max-width: fit-content;
-    border-radius: 0.5rem;
-    background-color: #d5d5d5;
-    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
-    border: 1px solid transparent;
-    border-radius:7px;">
-     <img  src="https://s3-sa-east-1.amazonaws.com/season-training/images/blog/blog-10.png"
-      style="object-fit: cover;
-     width: 100%;
-     height: 90px;
-     background-color: #4caf4f"></img>
-     <div style="padding: 1.1rem;">    <a href="#">
-     <span style="color: #111827;
-     font-size: 1.125rem;
-     line-height: 1.75rem;
-     font-weight: 600;">
-       Exercicicios {exercises.id}
-     </span>
-   </a>
-   <span style="display:flex;
-  
-   color: #111827;
-   font-size: 0.850rem;
-   line-height: 1.75rem;
-   font-weight: 600;">
-   {exercises.name}
- </span>
-    <span style="display:flex;
-  
-    color: #111827;
-    font-size: 0.850rem;
-    line-height: 1.75rem;
-    font-weight: 600;">
-   De: {user.id}
- </span>
-   
-   
- <p style="margin-top: 0.5rem;
- color: #6B7280;
- font-size: 0.750rem;
- line-height: 1.25rem; word-break: break-all;">
-  <strong> Exercicios simples e faceis de fazer !!! </strong>
- </p>
-
- <a style="display: inline-flex;
- margin-top: 1rem;
- color: #ffffff;
- font-size: 0.875rem;
- line-height: 1.25rem;
- font-weight: 500;
- align-items: center;
- gap: 0.25rem;
- background-color: #2563EB;
- padding: 4px 8px;
- border-radius: 4px;
- transition: .3s ease;" href="#">
-   Vamos Nessa 🚀
- </a>
-   </div>
-     </div>
-    
-    `;
+  const cardElem = [...containerCard].map((item) => {
+    return newElement(item, "div", "elemFor");
   });
+
+  const elemFor = document.querySelectorAll("#elemFor");
+
+  const cardItem = [...elemFor].map((item) => {
+    return newElement(item, "img", "imgFor");
+  });
+
+  const contentValue = [...elemFor].map((item) => {
+    return newElement(item, "div", "valueFor");
+  });
+
+  const valueFor = document.querySelectorAll("#valueFor");
+
+  return {
+    cardElem,
+    cardItem,
+    contentValue,
+  };
 }
