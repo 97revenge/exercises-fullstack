@@ -19,4 +19,8 @@ describe("validacoes de end-point", () => {
 
     expect(response.status).toBe(200);
   });
+  it("deve validar o end-point:/card/", async () => {
+    const response = await supertest(app).get("/card/");
+    expect(response.status).toBe(200);
+  });
 });
