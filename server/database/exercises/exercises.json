@@ -1,18 +1,21 @@
 {
   "while": [
     {
+      "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ03iAjWPv2l6GbC6KUTYMFJwdCx_JeSphcAw&usqp=CAU",
       "id": 1,
       "name": "Contagem Crescente",
       "author": "Matheus Pereira",
       "description": "Programa exibe sequência ascendente entre valores."
     },
     {
+      "img": "https://i.pinimg.com/736x/c1/d3/a1/c1d3a15ac9629e3eec08a551a8ad58c2.jpg",
       "id": 2,
       "name": "Adivinhe o Número",
       "author": "Matheus Pereira",
       "description": "Jogo de adivinhação interativo com dicas numéricas."
     },
     {
+      "img": "https://static.vecteezy.com/ti/fotos-gratis/p1/3334917-desktop-source-code-and-wallpaper-by-coding-and-programming-gratis-foto.jpg",
       "id": 3,
       "name": "Tabuada Interativa",
       "author": "Matheus Pereira",
@@ -21,18 +24,21 @@
   ],
   "for": [
     {
+      "img": "https://negociosegames.com/wp-content/uploads/2022/02/curso-introducao-logica-programacao-1.jpg",
       "id": 4,
       "name": "Soma dos Ímpares",
       "author": "Matheus Pereira",
       "description": "Calcule a soma dos números ímpares em um intervalo definido."
     },
     {
+      "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR5MjvFgcciZ2gtRNS4YU4ImX_oFQLRyQAfHw&usqp=CAU",
       "id": 5,
       "name": "Padrão de Estrelas",
       "author": "Matheus Pereira",
       "description": "Crie um padrão visual usando um loop `for` e caracteres."
     },
     {
+      "img": "https://idocode.com.br/wp-content/uploads/2021/07/pexels-luis-gomes-546819-scaled.jpg",
       "id": 6,
       "name": "contagem regressiva",
       "author": "Matheus Pereira",

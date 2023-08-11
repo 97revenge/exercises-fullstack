@@ -69,12 +69,16 @@ export default function styleWhileBanner() {
       .then((response) => response.data)
       .then((data) => {
         const value = [...imgWhile];
-        value.forEach((item) => {
+        value.forEach((item, index) => {
           item.setAttribute("style", data["image"]);
-          item.setAttribute(
-            "src",
-            "https://s3-sa-east-1.amazonaws.com/season-training/images/blog/blog-10.png"
-          );
+          axios
+            .get(`http://localhost:4000/exercises/`)
+            .then((response) => response.data)
+            .then((data) => {
+              const { while: wl } = data;
+
+              item.setAttribute("src", wl[index].img);
+            });
         });
       });
   };

@@ -29,9 +29,8 @@ window.onload = () => {
     "/exercises": () => {
       nav();
 
-      controllerWhileBanner();
-      controllerForBanner();
-      controllerIfElseBanner();
+      controllerExercisesBanner();
+
       controllerFooter();
 
       // controllerExercisesBanner(); // "esse funciona como o bloco total ...
@@ -52,6 +51,11 @@ window.onload = () => {
     "/ifelse": () => {
       nav();
       controllerIfElseBanner();
+      controllerFooter();
+    },
+
+    "/7": () => {
+      nav();
       controllerFooter();
     },
   };

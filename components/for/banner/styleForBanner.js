@@ -16,6 +16,14 @@ export default function styleForBanner() {
 
   const valueFor = document.querySelectorAll("#valueFor");
 
+  const titleFor = document.querySelectorAll("#titleFor");
+
+  const authorFor = document.querySelectorAll("#authorFor");
+
+  const descriptionFor = document.querySelectorAll("#descriptionFor");
+
+  const buttonFor = document.querySelectorAll("#buttonFor");
+
   const bannerElem = (elem, tag = "banner") => {
     axios
       .get(`http://localhost:4000/style/${tag}`)
@@ -68,9 +76,9 @@ export default function styleForBanner() {
             .get(`http://localhost:4000/exercises/`)
             .then((response) => response.data)
             .then((data) => {
-              const { ifelse: ie } = data;
-              console.log(ie[index].img);
-              item.setAttribute("src", ie[index].img);
+              const { for: fr } = data;
+              console.log(fr[index].img);
+              item.setAttribute("src", fr[index].img);
             });
         });
       });
@@ -88,6 +96,91 @@ export default function styleForBanner() {
         });
       });
   };
-
   cardValue();
+
+  const cardTitle = () => {
+    axios
+      .get(`http://localhost:4000/exercises/banner/`)
+      .then((response) => response.data)
+      .then((data) => {
+        const value = [...titleFor];
+        value.forEach((item, index) => {
+          item.style = data["title"];
+          axios
+            .get(`http://localhost:4000/exercises/`)
+            .then((response) => response.data)
+            .then((data) => {
+              const { ifelse: ie } = data;
+              item.innerHTML = `carregando...💭`;
+              setTimeout(() => {
+                item.innerHTML = ie[index].name;
+              }, 1500);
+            });
+        });
+      });
+  };
+  cardTitle();
+
+  const cardAutor = () => {
+    axios
+      .get(`http://localhost:4000/exercises/banner/`)
+      .then((response) => response.data)
+      .then((data) => {
+        const value = [...authorFor];
+        value.forEach((item, index) => {
+          item.style = data["desc"];
+          axios
+            .get(`http://localhost:4000/exercises/`)
+            .then((response) => response.data)
+            .then((data) => {
+              const { for: fr } = data;
+              item.innerHTML = `carregando...💭`;
+              setTimeout(() => {
+                item.innerHTML = `<u>Author: </u> ${fr[index].author}`;
+              }, 1600);
+            });
+        });
+      });
+  };
+  cardAutor();
+
+  const cardDescription = () => {
+    axios
+      .get(`http://localhost:4000/exercises/banner/`)
+      .then((response) => response.data)
+      .then((data) => {
+        const value = [...descriptionFor];
+        value.forEach((item, index) => {
+          item.style = data["description"];
+          axios
+            .get(`http://localhost:4000/exercises/`)
+            .then((response) => response.data)
+            .then((data) => {
+              const { for: fr } = data;
+              item.innerHTML = `carregando...💭`;
+              setTimeout(() => {
+                item.innerHTML = fr[index].description;
+              }, 1700);
+            });
+        });
+      });
+  };
+  cardDescription();
+
+  const buttonAction = () => {
+    axios
+      .get(`http://localhost:4000/exercises/banner/`)
+      .then((response) => response.data)
+      .then((data) => {
+        const value = [...buttonFor];
+        value.forEach((item) => {
+          item.style = data["action"];
+          item.innerHTML = `Vamos nessa 🚀`;
+          item.addEventListener("click", () => {
+            alert("voce clicou em algum exercicio !!!");
+          });
+        });
+      });
+  };
+  buttonAction();
 }

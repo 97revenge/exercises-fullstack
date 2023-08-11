@@ -11,6 +11,7 @@ export default function modelForBanner() {
     img: document.createElement("img"),
     a: document.createElement("a"),
     title: document.createElement("title"),
+    button: document.createElement("button"),
   });
 
   const component = Object.assign(Component.prototype.constructor);
@@ -84,9 +85,29 @@ export default function modelForBanner() {
 
   const valueFor = document.querySelectorAll("#valueFor");
 
+  const contentTitle = [...valueFor].map((item) => {
+    return newElement(item, "div", "titleFor");
+  });
+
+  const contentAuthor = [...valueFor].map((item) => {
+    return newElement(item, "p", "authorFor");
+  });
+
+  const contentDescription = [...valueFor].map((item) => {
+    return newElement(item, "p", "descriptionFor");
+  });
+
+  const buttonAction = [...valueFor].map((item) => {
+    return newElement(item, "button", "buttonFor");
+  });
+
   return {
     cardElem,
     cardItem,
     contentValue,
+    contentTitle,
+    contentAuthor,
+    contentDescription,
+    buttonAction,
   };
 }

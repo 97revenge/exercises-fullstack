@@ -69,20 +69,16 @@ export default function styleifElseBanner() {
       .then((response) => response.data)
       .then((data) => {
         const value = [...imgcises];
-        value.forEach((item) => {
+        value.forEach((item, index) => {
           item.setAttribute("style", data["image"]);
           axios
             .get(`http://localhost:4000/exercises/`)
             .then((response) => response.data)
             .then((data) => {
-              item.setAttribute(
-                "src",
-                "https://s3-sa-east-1.amazonaws.com/season-training/images/blog/blog-10.png"
-              );
+              const { ifelse: ie } = data;
+              item.setAttribute("src", ie[index].img);
             });
         });
-
-        return data;
       });
   };
   imgItem("image");
@@ -118,7 +114,7 @@ export default function styleifElseBanner() {
               setTimeout(() => {
                 item.innerHTML = ifelse[index].name;
               }, 1500);
-              item.setAttribute("href"`/${ifelse[index].id}`);
+              item.setAttribute("href", `/${ifelse[index].id}`); // dar uma olhada nisto !!!
               return data;
             });
         });
@@ -143,7 +139,7 @@ export default function styleifElseBanner() {
               item.innerHTML = `Carregando...`;
               console.log(ifelse[index].author);
               setTimeout(() => {
-                item.innerHTML = `<U>Author:   </U> ${ifelse[index].author}`;
+                item.innerHTML = `<u>Author:   </u> ${ifelse[index].author}`;
               }, 1600);
             });
         });
