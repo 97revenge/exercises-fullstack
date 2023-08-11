@@ -14,4 +14,9 @@ describe("validacoes de end-point", () => {
     const response = await supertest(app).get("/banner/");
     expect(response.status).toBe(200);
   });
+  it("deve validar o end-point: /footer/", async () => {
+    const response = await supertest(app).get("/footer/");
+
+    expect(response.status).toBe(200);
+  });
 });
