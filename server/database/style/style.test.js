@@ -6,8 +6,12 @@ const app = express();
 app.use(style);
 
 describe("validacoes de end-point", () => {
-  it("deve validar o end-point  /nav/", async () => {
+  it("deve validar o end-point:/nav/", async () => {
     const response = await supertest(app).get("/nav/");
+    expect(response.status).toBe(200);
+  });
+  it("deve validar o end-point:/banner/", async () => {
+    const response = await supertest(app).get("/banner/");
     expect(response.status).toBe(200);
   });
 });
