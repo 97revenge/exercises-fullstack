@@ -72,8 +72,8 @@ export default function styleifElseBanner() {
         value.forEach((item) => {
           item.setAttribute("style", data["image"]);
           axios
-            .then((response) => response.data)
             .get(`http://localhost:4000/exercises/`)
+            .then((response) => response.data)
             .then((data) => {
               item.setAttribute(
                 "src",
