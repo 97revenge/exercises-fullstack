@@ -17,8 +17,6 @@ export default function modelWhileAplyer() {
   const one = component.newElem(
     banner,
     "div",
-    String(window.location.href).split("/")
+    String(window.location.href.slice(-2))
   );
-
-  console.log(one);
 }

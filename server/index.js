@@ -8,12 +8,14 @@ const database = require("./database/database");
 const style = require("./database/style/style");
 const exercises = require("./database/exercises/exercises");
 const newBanner = require("./database/style/banner/banner");
+const aplyer = require("./database/style/aplyer/aplyer");
 
 app.use("/", newBanner);
 
 app.use(cors());
 
 app.use("/style", style);
+app.use("/style", aplyer);
 
 app.use("/database", database);
 
