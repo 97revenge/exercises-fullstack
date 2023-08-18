@@ -17,6 +17,7 @@ import controllerForBanner from "./components/for/banner/controllerForBanner";
 import controllerIfElseBanner from "./components/ifelse/banner/controllerIfElseBanner";
 
 import "./style.css";
+import controllerWhileAplyer from "./components/while/aplyer/controllerWhileAplyer";
 
 window.onload = () => {
   const routes = {
@@ -56,6 +57,7 @@ window.onload = () => {
 
     "/1": () => {
       nav();
+      controllerWhileAplyer();
       controllerFooter();
     },
     "/2": () => {
