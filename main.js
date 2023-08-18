@@ -54,7 +54,39 @@ window.onload = () => {
       controllerFooter();
     },
 
+    "/1": () => {
+      nav();
+      controllerFooter();
+    },
+    "/2": () => {
+      nav();
+      controllerFooter();
+    },
+    "/3": () => {
+      nav();
+      controllerFooter();
+    },
+    "/4": () => {
+      nav();
+      controllerFooter();
+    },
+    "/5": () => {
+      nav();
+      controllerFooter();
+    },
+    "/6": () => {
+      nav();
+      controllerFooter();
+    },
     "/7": () => {
+      nav();
+      controllerFooter();
+    },
+    "/8": () => {
+      nav();
+      controllerFooter();
+    },
+    "/9": () => {
       nav();
       controllerFooter();
     },

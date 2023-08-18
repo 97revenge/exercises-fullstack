@@ -177,12 +177,18 @@ export default function styleifElseBanner() {
       .then((response) => response.data)
       .then((data) => {
         const value = [...buttonises];
-        value.forEach((item) => {
+        value.forEach((item, index) => {
           item.style = data["action"];
           item.innerHTML = `Vamos nessa 🚀`;
-          item.addEventListener("click", () => {
-            alert("`voce clicou em algum exercicio !!!`");
-          });
+          axios
+            .get(`http://localhost:4000/exercises/`)
+            .then((response) => response.data)
+            .then((data) => {
+              const { ifelse: ie } = data;
+              item.addEventListener("click", () => {
+                window.location.href = `http://localhost:5173/${ie[index].id}`;
+              });
+            });
         });
       });
   };

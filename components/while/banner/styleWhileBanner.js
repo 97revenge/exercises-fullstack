@@ -174,12 +174,19 @@ export default function styleWhileBanner() {
       .then((response) => response.data)
       .then((data) => {
         const value = [...buttonWhile];
-        value.forEach((item) => {
+        value.forEach((item, index) => {
           item.style = data["action"];
           item.innerHTML = `Vamos nessa 🚀`;
-          item.addEventListener("click", function () {
-            return alert(`voce clicou em algum exercicio`);
-          });
+          axios
+            .get(`http://localhost:4000/exercises/`)
+            .then((response) => response.data)
+            .then((data) => {
+              const { while: wl } = data;
+
+              item.addEventListener("click", () => {
+                window.location.href = `http://localhost:5173/${wl[index].id}`;
+              });
+            });
         });
       });
   };
