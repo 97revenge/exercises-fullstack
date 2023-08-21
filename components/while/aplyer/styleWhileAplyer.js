@@ -1,18 +1,30 @@
 import axios from "axios";
 
 export default function styleModelAplyer() {
-  const banner = document.querySelector("#banner-container");
+  const aplyer = document.querySelector("#aplyer");
 
-  banner.styleQuery = (data, query) => {
-    banner.style = data[query];
+  const gettingDocument = (element) => {
+    const result = aplyer.querySelector("#" + element);
+
+    return result;
   };
 
-  const bannerElem = () => {
+  const gettingAxios = (tag) => {
+    const url = new URL(`http://localhost:4000/style/aplyer/${tag}`);
+
     axios
-      .get(``)
+      .get(url)
       .then((response) => response.data)
-      .then((data) => banner.styleQuery(data, "blablaba"));
+      .then((data) => {
+        const value = gettingDocument(url.pathname.split("/")[3].trim());
+
+        value.style = data;
+      });
   };
 
-  bannerElem();
+  gettingAxios("aplyer");
+  gettingAxios("div-elem-flex");
+
+  gettingAxios("div-elem-starter");
+  gettingAxios("div-starter");
 }
