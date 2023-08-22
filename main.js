@@ -1,6 +1,11 @@
 import { banner } from "./components/homepage/banner"; // refactor alert !!!
 import controllerFooter from "./components/homepage/footer/controllerFooter";
+
 import { nav } from "./components/homepage/nav"; // refactor alert !!!
+
+import * as whileFlow from "./components/__proto__/flow-exercises/__while__";
+import * as forFlow from "./components/__proto__/flow-exercises/__for__";
+import * as ifElseFlow from "./components/__proto__/flow-exercises/__ifelse__";
 
 /homepage/;
 import controllerSection from "./components/homepage/section/controllerSection";
@@ -56,40 +61,62 @@ window.onload = () => {
     },
 
     "/1": () => {
+      const { whileFirst: wf } = whileFlow.default;
       nav();
-      controllerWhileAplyer();
+      controllerWhileAplyer({
+        title: wf,
+        dificulty: "Bem Fácil 🎃",
+      });
       controllerFooter();
     },
     "/2": () => {
+      const { whileSecond: ws } = whileFlow.default;
+
       nav();
+      controllerWhileAplyer({
+        title: ws,
+        dificulty: "Bem Fácil 🧨",
+      });
       controllerFooter();
     },
     "/3": () => {
+      const { whileThird: wt } = whileFlow.default;
       nav();
+      controllerWhileAplyer("Liberado", wt);
+
       controllerFooter();
     },
     "/4": () => {
+      const { forFirst: ff } = forFlow.default;
       nav();
+      controllerWhileAplyer("Verifica", ff);
       controllerFooter();
     },
     "/5": () => {
+      const { forSecond: fs } = forFlow.default;
       nav();
+      controllerWhileAplyer("Liberado", fs);
       controllerFooter();
     },
     "/6": () => {
+      const { forThird: ft } = forFlow.default;
       nav();
+      controllerWhileAplyer("Liberado", ft);
       controllerFooter();
     },
     "/7": () => {
       nav();
+      controllerWhileAplyer("Liberado", ifElseFlow.default["ifElseFirst"]);
       controllerFooter();
     },
     "/8": () => {
       nav();
+      controllerWhileAplyer("Liberado", ifElseFlow.default["ifElseSecond"]);
       controllerFooter();
     },
     "/9": () => {
       nav();
+      controllerWhileAplyer("Liberado", ifElseFlow.default["ifElseThird"]);
       controllerFooter();
     },
   };

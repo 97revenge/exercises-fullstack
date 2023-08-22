@@ -9,6 +9,7 @@ const style = require("./database/style/style");
 const exercises = require("./database/exercises/exercises");
 const newBanner = require("./database/style/banner/banner");
 const aplyer = require("./database/style/aplyer/aplyer");
+const flow = require("./database/user-flow/user-flow");
 
 app.use("/", newBanner);
 
@@ -18,6 +19,8 @@ app.use("/style", style);
 app.use("/style", aplyer);
 
 app.use("/database", database);
+
+app.use("/database", flow);
 
 app.use("/", exercises);
 

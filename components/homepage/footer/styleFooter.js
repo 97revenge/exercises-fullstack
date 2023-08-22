@@ -51,7 +51,6 @@ export default function styleFooter() {
   const headerText = (tag = "footer") => {
     const footer = document.querySelector("footer");
     const div = footer.querySelectorAll("div")[2];
-    console.log(div);
 
     axios(`http://localhost:4000/style/${tag}`, {
       method: "GET",
@@ -76,7 +75,6 @@ export default function styleFooter() {
   const valueHeader = (tag = "footer") => {
     const footer = document.querySelector("footer");
     const div = footer.querySelectorAll("div")[3];
-    console.log(div);
 
     axios(`http://localhost:4000/style/${tag}`, {
       method: "GET",

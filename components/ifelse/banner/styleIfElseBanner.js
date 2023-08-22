@@ -114,7 +114,6 @@ export default function styleifElseBanner() {
               setTimeout(() => {
                 item.innerHTML = ifelse[index].name;
               }, 1500);
-              item.setAttribute("href", `/${ifelse[index].id}`); // dar uma olhada nisto !!!
               return data;
             });
         });

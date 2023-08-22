@@ -110,11 +110,12 @@ export default function styleForBanner() {
             .get(`http://localhost:4000/exercises/`)
             .then((response) => response.data)
             .then((data) => {
-              const { ifelse: ie } = data;
+              const { for: fr } = data;
               item.innerHTML = `carregando...💭`;
               setTimeout(() => {
-                item.innerHTML = ie[index].name;
+                item.innerHTML = fr[index].name;
               }, 1500);
+              item.setAttribute("href", `/${fr[index].id}`);
             });
         });
       });

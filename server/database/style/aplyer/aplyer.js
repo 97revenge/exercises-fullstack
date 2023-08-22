@@ -9,7 +9,8 @@ function Middleware(tag) {
       res.json(data);
     });
     this.id = function () {
-      router.get("/aplyer/:id", (req, res) => {
+      router.get("/aplyer/:tag", (req, res) => {
+        const tag = req.params.tag;
         res.json(data[tag]);
       });
     };
